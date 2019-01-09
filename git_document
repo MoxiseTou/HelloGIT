@@ -1,0 +1,15 @@
+集中化的版本控制		SVN
+分布式版本控制系统	GIT
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+$ cd /C/Users/Administrator/workspace/HelloGIT //cd到程序的目录底下
+$ git init //创建版本库
+$ git status //查看版本库当前状态
+$ git add .classpath //添加文件.classpath到版本库
+$ git add . //添加所有文件到版本库
+$ git commit -m "Hello GIT" //把你的代码提交到版本库，“Hello GIT ”是描述这段代码的内容
+$ git status
+
+工作区，暂存区，版本库以及三个区的关系
