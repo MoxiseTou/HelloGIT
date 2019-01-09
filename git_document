@@ -1,6 +1,8 @@
 集中化的版本控制		SVN
 分布式版本控制系统	GIT
 
+add 和提交-
+
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 
@@ -27,3 +29,19 @@ Hello qmm
 Hello liaoke
 
 Why hava 暂存区？
+
+版本管理
+
+回退-
+
+可以用git reset --head加多前6到8位的版本号(不用写全版本号，当然写全也是可以的)就可以回退了。
+$ git reset --hard 7ed03c0 //回退到Hello Arvin的版本
+$ git log
+
+万一我们版本号都不记得了怎么办，没事，有一条命令可以记录你每一次GIT的命令，那就是git reflog
+$ git reflog //查看你每一操作GIT的记录
+$ git reset --hard aff8f0892
+$ git log
+
+修改管理
+
