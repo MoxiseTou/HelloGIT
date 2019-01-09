@@ -20,7 +20,10 @@ Hello bmb
 暂存区：	git add . 的文件 一般在.git/index下
 		添加进入版本库的暂存区的文件都会变成绿色的，没有添加进去的都会是红色的
 版本库：	git commit的文件 .git下
+		git commit -am并不能提交新添加的文件,还是得add到暂存区
 
 Hello qmm
 
 Hello liaoke
+
+Why hava 暂存区？
