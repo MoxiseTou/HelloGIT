@@ -43,5 +43,14 @@ $ git reflog //查看你每一操作GIT的记录
 $ git reset --hard aff8f0892
 $ git log
 
-修改管理
-
+修改管理-
+	工作区-
+		$ git checkout -- src/com/breakyizhan/git/HelloGIT.java //撤销对HelloGIT.java的修改</pre>
+		$ git checkout . //撤销所有文件的修改
+	缓存区-
+		$ git reset HEAD src/com/breakyizhan/git/HelloGIT.java //把HelloGIT.java从暂存区放回工作区
+		$ git checkout -- src/com/breakyizhan/git/HelloGIT.java
+	版本库-
+		如果我修改了在helloGIT项目底下的一个HelloGIT.java的文件,用git add 添加到了暂存区，并且commit到了版本库了，那么，还能补救么？答案当然是可以的。还记得版本回退么？你直接回退到上一个版本，那就好了。
+	远程仓库-
+		如果你commit之后，还推送到远程仓库，那真是神仙也是救不了你了。。。。。
