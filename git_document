@@ -56,10 +56,12 @@ $ git log
 		如果你commit之后，还推送到远程仓库，那真是神仙也是救不了你了。。。。。
 
 删除文件-
-	git rm filename
-恢复-
-	红色 工作区删除
-	git checkout file
-	绿色 工作区删除+add
+	git rm filename = 绿色 工作区删除+add
+	恢复：
 	git rest -- head file
 	git checkout file
+
+	rm file = 红色 工作区删除
+	恢复：
+	git checkout file
+	
