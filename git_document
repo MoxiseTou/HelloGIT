@@ -13,3 +13,5 @@ $ git commit -m "Hello GIT" //把你的代码提交到版本库，“Hello GIT �
 $ git status
 
 工作区，暂存区，版本库以及三个区的关系
+
+Hello bmb
