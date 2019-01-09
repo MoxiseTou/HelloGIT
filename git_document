@@ -54,3 +54,8 @@ $ git log
 		如果我修改了在helloGIT项目底下的一个HelloGIT.java的文件,用git add 添加到了暂存区，并且commit到了版本库了，那么，还能补救么？答案当然是可以的。还记得版本回退么？你直接回退到上一个版本，那就好了。
 	远程仓库-
 		如果你commit之后，还推送到远程仓库，那真是神仙也是救不了你了。。。。。
+
+删除文件-
+	git rm filename
+恢复-
+	git checkout filename
