@@ -15,3 +15,9 @@ $ git status
 工作区，暂存区，版本库以及三个区的关系
 
 Hello bmb
+
+工作区：代码存放的地方
+暂存区：git add . 的文件 一般在.git/index下
+版本库：git commit的文件 .git下
+
+Hello qmm
