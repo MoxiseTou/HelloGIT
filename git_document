@@ -127,7 +127,7 @@ squash 是用来把一些不必要commit进行压缩，比如说，你的feature
 
 	dev branch do something!!!
 
-	dev branch do morething!!!
+	
 
 git的冲突
 	在合并分支的时候，master分支和dev分支恰好有人都修改了同一个文件，GIT不知道应该以哪一个人的文件为准，所以就产生了冲突了。
@@ -135,3 +135,4 @@ git的冲突
 	Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容, 我们修改之后，再次commit就行了，修改的时候，要记得把<<<<<<<，=======，>>>>>>>都删了，看下面红色框框就是我修改之后的内容，commit也是成功了。
 
 	
+dev branch do morething!!!
