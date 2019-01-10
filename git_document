@@ -1,3 +1,5 @@
+Hello GIT
+
 集中化的版本控制		SVN
 分布式版本控制系统	GIT
 
@@ -103,5 +105,4 @@ github的克隆和推送
 
 	本地如何提交分支到远程仓库？？？
 
-	emer branch do something !
-	emer branch do more thing !
+	dev branch do something!!!
