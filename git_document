@@ -1,0 +1,107 @@
+集中化的版本控制		SVN
+分布式版本控制系统	GIT
+
+add 和提交-
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+$ cd /C/Users/Administrator/workspace/HelloGIT //cd到程序的目录底下
+$ git init //创建版本库
+$ git status //查看版本库当前状态
+$ git add .classpath //添加文件.classpath到版本库
+$ git add . //添加所有文件到版本库
+$ git commit -m "Hello GIT" //把你的代码提交到版本库，“Hello GIT ”是描述这段代码的内容
+$ git status
+
+工作区，暂存区，版本库以及三个区的关系
+
+Hello bmb
+
+工作区：	代码存放的地方
+暂存区：	git add . 的文件 一般在.git/index下
+		添加进入版本库的暂存区的文件都会变成绿色的，没有添加进去的都会是红色的
+版本库：	git commit的文件 .git下
+		git commit -am并不能提交新添加的文件,还是得add到暂存区
+
+Hello qmm
+
+Hello liaoke
+
+Why hava 暂存区？
+
+版本管理
+
+回退-
+
+可以用git reset --head加多前6到8位的版本号(不用写全版本号，当然写全也是可以的)就可以回退了。
+$ git reset --hard 7ed03c0 //回退到Hello Arvin的版本
+$ git log
+
+万一我们版本号都不记得了怎么办，没事，有一条命令可以记录你每一次GIT的命令，那就是git reflog
+$ git reflog //查看你每一操作GIT的记录
+$ git reset --hard aff8f0892
+$ git log
+
+修改管理-
+	工作区-
+		$ git checkout -- src/com/breakyizhan/git/HelloGIT.java //撤销对HelloGIT.java的修改</pre>
+		$ git checkout . //撤销所有文件的修改
+	缓存区-
+		$ git reset HEAD src/com/breakyizhan/git/HelloGIT.java //把HelloGIT.java从暂存区放回工作区
+		$ git checkout -- src/com/breakyizhan/git/HelloGIT.java
+	版本库-
+		如果我修改了在helloGIT项目底下的一个HelloGIT.java的文件,用git add 添加到了暂存区，并且commit到了版本库了，那么，还能补救么？答案当然是可以的。还记得版本回退么？你直接回退到上一个版本，那就好了。
+	远程仓库-
+		如果你commit之后，还推送到远程仓库，那真是神仙也是救不了你了。。。。。
+
+删除文件-
+	git rm filename = 绿色 工作区删除+add
+	恢复：
+	git rest -- head file
+	git checkout file
+
+	rm file = 红色 工作区删除
+	恢复：
+	git checkout file
+	
+连接远程仓库
+	1.注册网站账号邮箱，用来生成ssh key。
+	2.$ ssh-keygen -t rsa -C "youremail@example.com"
+	3.找到生成pub key里面的id_rsa.pub文件，默认目录是C:\Users\Administrator\.ssh，复制id.rsa.pub里面的内容到github上面去创建SSH keys
+	4.关联本地仓库和GitHub仓库
+	$ git remote add origin https://github.com/Breakyizhan/HelloGIT.git
+	5.测试仓库连接
+	$ ssh -T git@github.com
+
+
+github的克隆和推送
+	从远程仓库取得代码
+		1.创建GIT版本库 + 建立远程连接
+			git init 
+			git remote origin ${github_path}
+			git pull origin master (git pull 要加 origin + 树干name)
+		2.克隆- 
+			git clone ${github_path}
+
+	把代码从远程库更新到本地
+		git pull
+
+	推送代码到远程库
+		git push -u origin master
+		这个推送是推送本地版本库里面的代码，一般是在commit的命令之后执行的
+
+创建分支
+	创建并切换分支
+	git checkout -b dev
+  	= 
+  	创建分支
+	git branch dev
+	+
+	切换分支
+	git checkout dev
+
+	本地如何提交分支到远程仓库？？？
+
+	emer branch do something !
+	emer branch do more thing !
