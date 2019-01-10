@@ -65,3 +65,11 @@ $ git log
 	恢复：
 	git checkout file
 	
+连接远程仓库
+	1.注册网站账号邮箱，用来生成ssh key。
+	2.$ ssh-keygen -t rsa -C "youremail@example.com"
+	3.找到生成pub key里面的id_rsa.pub文件，默认目录是C:\Users\Administrator\.ssh，复制id.rsa.pub里面的内容到github上面去创建SSH keys
+	4.关联本地仓库和GitHub仓库
+	$ git remote add origin https://github.com/Breakyizhan/HelloGIT.git
+	5.测试仓库连接
+	$ ssh -T git@github.com
