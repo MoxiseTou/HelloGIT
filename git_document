@@ -73,3 +73,32 @@ $ git log
 	$ git remote add origin https://github.com/Breakyizhan/HelloGIT.git
 	5.测试仓库连接
 	$ ssh -T git@github.com
+
+
+github的克隆和推送
+	从远程仓库取得代码
+		1.创建GIT版本库 + 建立远程连接
+			git init 
+			git remote origin ${github_path}
+			git pull origin master (git pull 要加 origin + 树干name)
+		2.克隆- 
+			git clone ${github_path}
+
+	把代码从远程库更新到本地
+		git pull
+
+	推送代码到远程库
+		git push -u origin master
+		这个推送是推送本地版本库里面的代码，一般是在commit的命令之后执行的
+
+创建分支
+	创建并切换分支
+	git checkout -b dev
+  	= 
+  	创建分支
+	git branch dev
+	+
+	切换分支
+	git checkout dev
+
+	本地如何提交分支到远程仓库？？？
