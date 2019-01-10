@@ -1,3 +1,5 @@
+Hello GIT
+
 集中化的版本控制		SVN
 分布式版本控制系统	GIT
 
@@ -102,3 +104,5 @@ github的克隆和推送
 	git checkout dev
 
 	本地如何提交分支到远程仓库？？？
+
+	dev branch do something!!!
