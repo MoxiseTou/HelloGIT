@@ -121,7 +121,8 @@ github的克隆和推送
 	于是使用--squash进行合并，此时文件已经同合并后一样了，但不移动HEAD，不提交。需要进行一次额外的commit来“总结”一下，然后完成最终的合并。
 
 	--no-ff指的是强行关闭fast-forward方式。
-
+	git merge --no-ff -m "dev merge master with no-ff" dev
+	
 	git log --graph --pretty=oneline --abbrev-commit 带图形日志
 	
 	本地如何提交分支到远程仓库？？？
