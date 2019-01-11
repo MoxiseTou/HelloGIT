@@ -125,9 +125,6 @@ github的克隆和推送
 	git log --graph --pretty=oneline --abbrev-commit 带图形日志
 	
 	本地如何提交分支到远程仓库？？？
-
-	dev branch do something!!!
-
 	
 
 git的冲突
@@ -137,3 +134,5 @@ git的冲突
 
 	
 	dev branch do more thing !!!
+
+	mer branch do some thing !!!
