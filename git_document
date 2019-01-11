@@ -126,9 +126,6 @@ github的克隆和推送
 	git log --graph --pretty=oneline --abbrev-commit 带图形日志
 	
 	本地如何提交分支到远程仓库？？？
-
-	dev branch do something!!!
-
 	
 
 git的冲突
@@ -137,4 +134,4 @@ git的冲突
 	Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容, 我们修改之后，再次commit就行了，修改的时候，要记得把<<<<<<<，=======，>>>>>>>都删了，看下面红色框框就是我修改之后的内容，commit也是成功了。
 
 	
-	dev branch do more thing !!!
+	mer branch do some thing !!!
