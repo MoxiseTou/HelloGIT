@@ -121,21 +121,44 @@ github的克隆和推送
 	于是使用--squash进行合并，此时文件已经同合并后一样了，但不移动HEAD，不提交。需要进行一次额外的commit来“总结”一下，然后完成最终的合并。
 
 	--no-ff指的是强行关闭fast-forward方式。
-	git merge --no-ff -m "dev merge master with no-ff" dev
+	1.	git merge dev
+		直接将dev上的commit信息合并到master上，没有分支信息
 	
+	2.	git merge --squash dev
+		git commit -m "message here"
+		squash=压缩：只会把分支的commit的文件合并到master的文件并add . 不会commit
+		需要手动再commit一次
+
+	3.	git merge --no-ff -m "dev merge master with no-ff" dev
+		有分支信息，并在master线上+一个合并commit信息
+
 	git log --graph --pretty=oneline --abbrev-commit 带图形日志
 	
-	本地如何提交分支到远程仓库？？？
+暂存区的使用
+	git add . //现在在dev分支，代码添加文件到暂存区，但是没有commit
+	git stash //把代码暂存起来
+	git checkout master //切回主线
+	git checkout -b EmergencyIssue //创建分支修改EmergencyIssu	//After one hour...... 	EmergencyIssue fixed.
+	git checkout master //修改好之后切回主线
+	git merge --no-ff -m "merged bug fix EmergencyIssue" iEmergencyIssue //分支合并
+	git branch -d EmergencyIssue //删除分支
+	git checkout dev //切回dev的分支
+	git status //查看状态，但是发现什么都没有
+	git stash list //可以看到暂存区存起来的list
+	stash@{0}: WIP on dev: 888888 add merge
+	git stash pop //恢复stash后并删除stash的内容
+	git stash list
 	
+	git stash pop 
+	=
+	git stash apply //恢复暂存区内容
+	+
+	git stash drop  //删除暂存区内容
 
+	git stash apply stash@{0} //指定恢复暂存区那一版数据
 git的冲突
 	在合并分支的时候，master分支和dev分支恰好有人都修改了同一个文件，GIT不知道应该以哪一个人的文件为准，所以就产生了冲突了。
 	解决：
 	Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容, 我们修改之后，再次commit就行了，修改的时候，要记得把<<<<<<<，=======，>>>>>>>都删了，看下面红色框框就是我修改之后的内容，commit也是成功了。
 
-	
-	mer branch do some thing !!!
-
-	lk do some thing !!!
-
-	lk do more thing !!!
+本地如何提交分支到远程仓库？？？
