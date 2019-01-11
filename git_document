@@ -179,4 +179,22 @@ git的config
 
 本地如何提交分支到远程仓库？？？
 	
-	嘻嘻
+Q:git提交代码时候写错commit信息后，如何重新设置commit信息？
+A:可以通过Git commit --amend 来对本次commit进行修改。
+
+Q:我们在本地工程常会修改一些配置文件，这些文件不需要被提交，而我们又不想每次执行git status时都让这些文件显示出来，我们该如何操作？
+A:在Git工作区的跟目录下创建一个特殊的.gitignore文件，然后把忽略的文件名编辑进去，Git就会自动忽略这些文件。
+
+Q:假如你现在的分支为main_dev,并在这个分支上修复了一个bug,但是在main_zh_test分支也发现了同样的一个bug,如果不用copy代码的方式你如何把main_dev修复这个bug提交的代码合并到main_zh_test分支上,请贴出你的git操作指令和指令的含义(合并时没有冲突)?
+
+A:
+	1、在main_dev上通过gitk/gitlog，使用bugid搜索提交的commit id
+	2、使用git checkout main_zh_test 切换分支
+	3、使用git cherry-pick commitid 将对bug的修改批量移植到该分支上
+	4、git commit 提交到本地
+	5、git push 推送到远程仓库.
+
+Q:git add添加文件到版本库，文件名有空格
+A:
+	git add path1/path2/filename_part1" "part2" "part3.txt
+	有空格的时候，应该用” “双引号包围空格来完成。
