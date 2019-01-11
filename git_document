@@ -156,9 +156,25 @@ github的克隆和推送
 	git stash drop  //删除暂存区内容
 
 	git stash apply stash@{0} //指定恢复暂存区那一版数据
+
+
 git的冲突
 	在合并分支的时候，master分支和dev分支恰好有人都修改了同一个文件，GIT不知道应该以哪一个人的文件为准，所以就产生了冲突了。
 	解决：
 	Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容, 我们修改之后，再次commit就行了，修改的时候，要记得把<<<<<<<，=======，>>>>>>>都删了，看下面红色框框就是我修改之后的内容，commit也是成功了。
+
+git的config
+	查看和修改name和email
+	查看
+		git config user.name
+		git config user.email
+	修改
+		git config user.name "username" //修改当前仓库的username
+		git config user.email "useremail" //修改当前仓库的email
+		git config --global user.name "username" //修改全局仓库的username
+		git config --global user.email "useremail" //修改全局仓库的email
+
+	查看git的全部config
+		git config --list
 
 本地如何提交分支到远程仓库？？？
